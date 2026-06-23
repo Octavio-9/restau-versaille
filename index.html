@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Versailles — Restaurant Gastronomique · Conakry</title>
+  <meta name="description" content="Restaurant Versailles, Conakry. Une expérience gastronomique d'exception au cœur de la Guinée. Cuisine locale & internationale. Réservez au +224 628 43 44 45."/>
+  <meta name="keywords" content="restaurant Versailles Conakry, gastronomique Guinée, fine dining Conakry, restaurant luxe Conakry"/>
+  <meta property="og:title" content="Versailles — Restaurant Gastronomique · Conakry"/>
+  <meta property="og:description" content="Une expérience gastronomique d'exception au cœur de Conakry, Guinée."/>
+  <meta property="og:type" content="restaurant"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+  <!-- ══ NAV ══ -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo" aria-label="Versailles Accueil">
+        <div class="logo-wrapper">
+          <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#D4AF37" />
+                <stop offset="50%" stop-color="#F3E5AB" />
+                <stop offset="100%" stop-color="#AA7C11" />
+              </linearGradient>
+            </defs>
+            <!-- Fork 1 (tilted) -->
+            <g transform="translate(50,50) rotate(25) translate(-50,-50)" stroke="url(#goldGrad)" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M50,15 L50,72"/>
+              <!-- Main top-outward curls -->
+              <path d="M50,15 C40,5 30,12 36,22 C41,29 50,22 50,22"/>
+              <path d="M50,15 C60,5 70,12 64,22 C59,29 50,22 50,22"/>
+              <!-- Secondary lower-outward curls -->
+              <path d="M50,27 C38,24 32,32 40,40 C45,44 50,38 50,38"/>
+              <path d="M50,27 C62,24 68,32 60,40 C55,44 50,38 50,38"/>
+              <!-- Four tines at the bottom pointing downwards/outwards -->
+              <path d="M41,72 C41,75 43,78 50,78 C57,78 59,75 59,72 M41,72 L41,84 M47,72 L47,86 M53,72 L53,86 M59,72 L59,84"/>
+            </g>
+            <!-- Fork 2 (tilted other way) -->
+            <g transform="translate(50,50) rotate(-25) translate(-50,-50)" stroke="url(#goldGrad)" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M50,15 L50,72"/>
+              <path d="M50,15 C40,5 30,12 36,22 C41,29 50,22 50,22"/>
+              <path d="M50,15 C60,5 70,12 64,22 C59,29 50,22 50,22"/>
+              <path d="M50,27 C38,24 32,32 40,40 C45,44 50,38 50,38"/>
+              <path d="M50,27 C62,24 68,32 60,40 C55,44 50,38 50,38"/>
+              <path d="M41,72 C41,75 43,78 50,78 C57,78 59,75 59,72 M41,72 L41,84 M47,72 L47,86 M53,72 L53,86 M59,72 L59,84"/>
+            </g>
+          </svg>
+          <div class="logo-text-group">
+            <span class="logo-title">VERSAILLES</span>
+            <span class="logo-subtitle">Restaurant <span class="logo-stars">★ ★</span></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (Visible on large screens) -->
+      <ul class="desktop-nav-list" role="list">
+        <li><a href="index.html#experience" class="d-nav-item">L'expérience</a></li>
+        <li><a href="menu.html" class="d-nav-item">Le menu</a></li>
+        <li><a href="index.html#histoire" class="d-nav-item">Histoire</a></li>
+        <li><a href="index.html#galerie" class="d-nav-item">Galerie</a></li>
+        <li><a href="index.html#contact" class="d-nav-item">Contact</a></li>
+      </ul>
+
+      <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+      <div class="nav-menu" id="navMenu" role="dialog" aria-label="Menu de navigation">
+        <div class="nav-menu-inner">
+          <ul class="nav-list" role="list">
+            <li><a href="index.html#experience" class="nav-item">L'expérience</a></li>
+            <li><a href="menu.html" class="nav-item">Le menu</a></li>
+            <li><a href="index.html#histoire" class="nav-item">Histoire</a></li>
+            <li><a href="index.html#galerie" class="nav-item">Galerie</a></li>
+            <li><a href="index.html#contact" class="nav-item">Contact</a></li>
+          </ul>
+          <a href="index.html#reservation" class="nav-reserve">Réserver une table</a>
+          <div class="nav-footer-info">
+            <p>+224 628 43 44 45</p>
+            <p>Centre Versailles · Conakry</p>
+          </div>
+        </div>
+      </div>
+      <a href="index.html#reservation" class="nav-cta" id="navCta">Réserver</a>
+    </nav>
+  </header>
+
+  <!-- ══ HERO ══ -->
+  <section id="accueil" class="hero" aria-label="Accueil">
+    <div class="hero-media">
+      <img src="img-hero.png" alt="" aria-hidden="true" class="hero-img" fetchpriority="high"/>
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span>Conakry, Guinée</span>
+        <span class="eyebrow-line"></span>
+      </p>
+      <h1 class="hero-title">
+        <span class="hero-word" data-delay="0">Une</span>
+        <em class="hero-word hero-italic" data-delay="100">table</em>
+        <span class="hero-word" data-delay="200">qui</span>
+        <br/>
+        <span class="hero-word" data-delay="300">vous</span>
+        <em class="hero-word hero-italic" data-delay="400">raconte</em>
+      </h1>
+      <p class="hero-sub">Cuisine locale & internationale · Depuis le Centre Versailles</p>
+      <div class="hero-actions">
+        <a href="menu.html" class="btn-text" id="heroMenuLink">
+          <span>Découvrir le menu</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </a>
+        <a href="#reservation" class="btn-primary" id="heroReserveLink">Réserver une table</a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-track"><div class="scroll-thumb"></div></div>
+    </div>
+    <div class="hero-info" aria-hidden="true">
+      <div class="hero-info-block">
+        <span class="info-label">Horaires</span>
+        <span class="info-value">Lun–Sam 11h–23h</span>
+      </div>
+      <div class="hero-info-sep"></div>
+      <div class="hero-info-block">
+        <span class="info-label">Dimanche</span>
+        <span class="info-value">12h–22h</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ INTRO STATEMENT ══ -->
+  <section class="statement" aria-label="Notre philosophie">
+    <div class="statement-inner">
+      <p class="statement-text js-reveal">
+        Au cœur de <em>Conakry</em>, nous avons créé un espace où la cuisine devient langage — 
+        où chaque plat est une conversation entre <em>tradition africaine</em> 
+        et précision gastronomique internationale.
+      </p>
+      <div class="statement-meta js-reveal">
+        <div class="meta-item">
+          <span class="meta-num">12+</span>
+          <span class="meta-label">Années d'excellence</span>
+        </div>
+        <div class="meta-sep" aria-hidden="true"></div>
+        <div class="meta-item">
+          <span class="meta-num">4.9</span>
+          <span class="meta-label">Note moyenne</span>
+        </div>
+        <div class="meta-sep" aria-hidden="true"></div>
+        <div class="meta-item">
+          <span class="meta-num">200+</span>
+          <span class="meta-label">Couverts / semaine</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EXPÉRIENCE (FEATURE SECTIONS) ══ -->
+  <section id="experience" class="experience" aria-label="Notre expérience">
+
+    <!-- Block 1: image gauche / texte droit -->
+    <div class="exp-block exp-block--image-left">
+      <div class="exp-image js-parallax-img">
+        <img src="img-dish.png" alt="Plat signature du Restaurant Versailles" loading="lazy"/>
+        <div class="exp-image-caption" aria-hidden="true">Signature · Saison 2025</div>
+      </div>
+      <div class="exp-text">
+        <p class="exp-eyebrow js-reveal">Notre cuisine</p>
+        <h2 class="exp-title js-reveal">Le goût<br/><em>de l'Afrique</em><br/>réinventé</h2>
+        <p class="exp-body js-reveal">
+          Nos chefs puisent dans le patrimoine culinaire guinéen pour créer des plats qui surprennent, 
+          émeuvent et rassasient. Chaque ingrédient est sélectionné le matin même, chaque sauce 
+          est construite avec rigueur et générosité.
+        </p>
+        <a href="menu.html" class="btn-text js-reveal" id="expMenuLink">
+          <span>Voir la carte</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Block 2: texte gauche / image droite -->
+    <div class="exp-block exp-block--image-right">
+      <div class="exp-text">
+        <p class="exp-eyebrow js-reveal">L'ambiance</p>
+        <h2 class="exp-title js-reveal">Un cadre<br/><em>intime</em><br/>& raffiné</h2>
+        <p class="exp-body js-reveal">
+          Boiseries sombres, lumière tamisée, musique discrète. Nous avons pensé chaque détail 
+          pour que vous ne pensiez qu'à l'essentiel : le plaisir d'être ensemble autour d'une belle table.
+        </p>
+        <a href="#reservation" class="btn-text js-reveal" id="expReserveLink">
+          <span>Réserver</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </a>
+      </div>
+      <div class="exp-image js-parallax-img">
+        <img src="img-chef.png" alt="Notre cuisine en préparation" loading="lazy"/>
+        <div class="exp-image-caption" aria-hidden="true">Cuisine ouverte · Chaque soir</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══ MENU ══ -->
+  <section id="menu" class="menu-section" aria-label="Notre menu">
+    <div class="menu-header">
+      <p class="section-eyebrow js-reveal">La carte</p>
+      <h2 class="section-title js-reveal">Ce que nous<br/><em>vous proposons</em></h2>
+      <p class="menu-desc js-reveal">Une sélection de plats qui évoluent au fil des saisons et de l'inspiration de nos chefs.</p>
+    </div>
+
+    <div class="menu-tabs-row" role="tablist" aria-label="Catégories du menu">
+      <button class="menu-tab active" role="tab" aria-selected="true" data-cat="burgers" id="tab-burgers">Burgers</button>
+      <button class="menu-tab" role="tab" aria-selected="false" data-cat="pizzas" id="tab-pizzas">Pizzas</button>
+      <button class="menu-tab" role="tab" aria-selected="false" data-cat="plats" id="tab-plats">Nos Plats</button>
+      <button class="menu-tab" role="tab" aria-selected="false" data-cat="grillades" id="tab-grillades">Grillades</button>
+      <button class="menu-tab" role="tab" aria-selected="false" data-cat="boissons" id="tab-boissons">Boissons & Extras</button>
+    </div>
+
+    <div class="menu-body">
+
+      <div class="menu-panel active" id="cat-burgers" role="tabpanel" aria-labelledby="tab-burgers">
+        <div class="menu-list">
+          <div class="menu-entry menu-entry--featured"><div class="me-left"><h3 class="me-name">Burger Versailles <span class="me-tag">Signature</span></h3><p class="me-desc">Steak haché, steak poulet, steak mozza, jambon de dinde, cheddar, salade, sauce biggy</p></div><span class="me-price">155 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Zinger Burger</h3><p class="me-desc">Pain hamburger, poulet crispy, jambon de dinde, salade, cornichon, cheddar, sauce biggy</p></div><span class="me-price">65 000 FG / 100 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">JP Mozza Beef</h3><p class="me-desc">Steak haché, steak mozzarella, oignon grillé, salade, cornichon, sauce bbq</p></div><span class="me-price">100 000 FG / 135 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Burger Old School</h3><p class="me-desc">Steak haché, salade de choux, frites, ketchup</p></div><span class="me-price">45 000 FG / 80 000 FG</span></div>
+        </div>
+      </div>
+
+      <div class="menu-panel" id="cat-pizzas" role="tabpanel" aria-labelledby="tab-pizzas">
+        <div class="menu-list">
+          <div class="menu-entry menu-entry--featured"><div class="me-left"><h3 class="me-name">Pizza au Mètre <span class="me-tag">Spécialité</span></h3><p class="me-desc">1 mètre de pizza composé de 5 saveurs au choix (hors week-end)</p></div><span class="me-price">375 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Pizza Classic Crevettes</h3><p class="me-desc">Crevettes, sauce tomate, mozzarella, oignon, poivron, olive, champignon</p></div><span class="me-price">210 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Pizza Burger</h3><p class="me-desc">Sauce mixte, mozzarella, steak haché, cheddar, oignon, peperoni, tomate</p></div><span class="me-price">160 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Pizza Margarita</h3><p class="me-desc">Sauce tomate maison, mozzarella, origan</p></div><span class="me-price">80 000 FG</span></div>
+        </div>
+      </div>
+
+      <div class="menu-panel" id="cat-plats" role="tabpanel" aria-labelledby="tab-plats">
+        <div class="menu-list">
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Steak Sauce Poivres</h3><p class="me-desc">Steak de bœuf juteux, sauce crémeuse au poivre vert. Accompagné de frites ou riz</p></div><span class="me-price">175 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Poulet Sauce Champignon</h3><p class="me-desc">Blanc de poulet tendre, crème aux champignons. Accompagné de légumes, frites ou riz</p></div><span class="me-price">160 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Filet de Capitaine à la Crème</h3><p class="me-desc">Pavé de capitaine frais, sauce veloutée citronnée. Accompagné de légumes et riz</p></div><span class="me-price">190 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Fettuccini Alfredo</h3><p class="me-desc">Recette italienne traditionnelle, crème fraîche double, beurre, parmesan et ail</p></div><span class="me-price">115 000 FG</span></div>
+        </div>
+      </div>
+
+      <div class="menu-panel" id="cat-grillades" role="tabpanel" aria-labelledby="tab-grillades">
+        <div class="menu-list">
+          <div class="menu-entry menu-entry--featured"><div class="me-left"><h3 class="me-name">Machewe Versailles <span class="me-tag">Partage</span></h3><p class="me-desc">Plateau géant pour 4 personnes : ailes, crevettes, brochettes bœuf, tawouk, kabab, frites, sauces</p></div><span class="me-price">485 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Poulet Libanais Braisé</h3><p class="me-desc">Poulet entier mariné aux épices, cuit sur braises. Servi avec frites, cornichon et aïoli</p></div><span class="me-price">180 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Mix Grill</h3><p class="me-desc">1 brochette viande, 1 brochette tawouk, 2 brochettes kabab avec frites et houmous</p></div><span class="me-price">180 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Poisson Attiéké</h3><p class="me-desc">Mérou entier frit servi avec attiéké local, salade, oignons et tomates</p></div><span class="me-price">150 000 FG</span></div>
+        </div>
+      </div>
+
+      <div class="menu-panel" id="cat-boissons" role="tabpanel" aria-labelledby="tab-boissons">
+        <div class="menu-list">
+          <div class="menu-entry menu-entry--featured"><div class="me-left"><h3 class="me-name">Smoothie Avocat Miel Crunchy</h3><p class="me-desc">Avocat crémeux glacé, miel local pur, éclats de cacahuètes grillées</p></div><span class="me-price">50 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Cocktail Versailles</h3><p class="me-desc">Cocktail royal signature maison aux fruits tropicaux pressés</p></div><span class="me-price">75 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Mojito Passion</h3><p class="me-desc">Menthe fraîche, citron vert, fruit de la passion et eau gazeuse</p></div><span class="me-price">40 000 FG</span></div>
+          <div class="menu-entry"><div class="me-left"><h3 class="me-name">Bissap & Gingembre</h3><p class="me-desc">Boisson traditionnelle infusée à l'hibiscus rouge et gingembre pressé</p></div><span class="me-price">20 000 FG</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="menu-footer">
+      <a href="https://wa.me/224628434445?text=Bonjour%20Restaurant%20Versailles,%20je%20souhaite%20commander%20:" target="_blank" rel="noopener" class="btn-wa" id="menuWaBtn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Commander via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ══ HISTOIRE / À PROPOS ══ -->
+  <section id="histoire" class="histoire" aria-label="Notre histoire">
+    <div class="histoire-visual">
+      <img src="img-table.png" alt="Table dressée au Restaurant Versailles" loading="lazy" class="js-parallax-img"/>
+      <div class="histoire-tag" aria-hidden="true">
+        <span>Est. Conakry</span>
+      </div>
+    </div>
+    <div class="histoire-content">
+      <p class="section-eyebrow js-reveal">Notre histoire</p>
+      <h2 class="section-title js-reveal">Une maison,<br/>une <em>famille</em></h2>
+      <p class="histoire-lead js-reveal">
+        Versailles est né d'une conviction simple : la Guinée mérite une gastronomie qui lui ressemble — 
+        riche, généreuse, diverse, et profondément ancrée dans ses traditions.
+      </p>
+      <p class="histoire-body js-reveal">
+        Depuis notre ouverture au Centre Versailles de Conakry, nous avons servi des milliers de tables : 
+        des dîners d'affaires, des fêtes de famille, des premiers anniversaires, des déjeuners d'amour. 
+        Nous ne faisons pas que nourrir — nous créons des souvenirs.
+      </p>
+      <div class="histoire-values js-reveal">
+        <div class="hv-item">
+          <span class="hv-label">Qualité</span>
+          <p>Ingrédients sélectionnés chaque matin</p>
+        </div>
+        <div class="hv-item">
+          <span class="hv-label">Hygiène</span>
+          <p>Normes HACCP strictement respectées</p>
+        </div>
+        <div class="hv-item">
+          <span class="hv-label">Accueil</span>
+          <p>Service chaleureux, sans jamais faire attendre</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ GALERIE ══ -->
+  <section id="galerie" class="galerie" aria-label="Notre galerie">
+    <div class="galerie-header">
+      <p class="section-eyebrow js-reveal">En images</p>
+      <h2 class="section-title js-reveal">La galerie<br/><em>Versailles</em></h2>
+    </div>
+    <div class="galerie-grid" role="list">
+      <figure class="g-item g-item--1 js-reveal" role="listitem">
+        <img src="img-hero.png" alt="Salle du Restaurant Versailles" loading="lazy"/>
+        <figcaption>L'ambiance</figcaption>
+      </figure>
+      <figure class="g-item g-item--2 js-reveal" role="listitem">
+        <img src="img-dish.png" alt="Plat signature" loading="lazy"/>
+        <figcaption>Nos plats</figcaption>
+      </figure>
+      <figure class="g-item g-item--3 js-reveal" role="listitem">
+        <img src="img-chef.png" alt="En cuisine" loading="lazy"/>
+        <figcaption>En cuisine</figcaption>
+      </figure>
+      <figure class="g-item g-item--4 js-reveal" role="listitem">
+        <img src="img-table.png" alt="Table dressée" loading="lazy"/>
+        <figcaption>La table</figcaption>
+      </figure>
+      <figure class="g-item g-item--5 js-reveal" role="listitem">
+        <img src="gallery1.png" alt="Grillades maison" loading="lazy"/>
+        <figcaption>Grillades</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══ AVIS ══ -->
+  <section class="avis-section" aria-label="Avis de nos clients">
+    <div class="avis-header">
+      <p class="section-eyebrow js-reveal">Témoignages</p>
+      <h2 class="section-title js-reveal">Ce qu'ils disent<br/><em>de nous</em></h2>
+    </div>
+    <div class="avis-track" id="avisTrack" role="list">
+      <article class="avis-card" role="listitem">
+        <div class="avis-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+        <blockquote class="avis-quote">"Le meilleur restaurant de Conakry. Les grillades sont exceptionnelles et le service dépasse toutes les attentes. Un lieu que l'on revient voir encore et encore."</blockquote>
+        <div class="avis-author"><strong>Aminata M.</strong> · Conakry</div>
+      </article>
+      <article class="avis-card avis-card--accent" role="listitem">
+        <div class="avis-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+        <blockquote class="avis-quote">"Une ambiance magnifique, une cuisine qui mélange parfaitement tradition africaine et gastronomie internationale. Le poulet DG est absolument divin."</blockquote>
+        <div class="avis-author"><strong>Kémo D.</strong> · Conakry</div>
+      </article>
+      <article class="avis-card" role="listitem">
+        <div class="avis-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+        <blockquote class="avis-quote">"Idéal pour les dîners d'affaires. Le cadre est sobre et élégant, les prix honnêtes, la qualité constante. Je recommande les brochettes de bœuf."</blockquote>
+        <div class="avis-author"><strong>Mamadou B.</strong> · Conakry</div>
+      </article>
+      <article class="avis-card" role="listitem">
+        <div class="avis-stars" aria-label="5 étoiles sur 5">★★★★★</div>
+        <blockquote class="avis-quote">"Nous y avons fêté notre anniversaire de mariage. Tout était parfait — la cuisine, le service, l'atmosphère. Versailles est une adresse que nous chérissons."</blockquote>
+        <div class="avis-author"><strong>Fatoumata &amp; Oumar</strong> · Conakry</div>
+      </article>
+    </div>
+    <div class="avis-nav" aria-label="Navigation témoignages">
+      <button class="avis-btn" id="avisPrev" aria-label="Témoignage précédent">←</button>
+      <button class="avis-btn" id="avisNext" aria-label="Témoignage suivant">→</button>
+    </div>
+  </section>
+
+  <!-- ══ RÉSERVATION ══ -->
+  <section id="reservation" class="reservation" aria-label="Réservation">
+    <div class="res-split">
+      <div class="res-image">
+        <img src="img-hero.png" alt="" aria-hidden="true" loading="lazy"/>
+        <div class="res-image-overlay" aria-hidden="true"></div>
+        <div class="res-image-content" aria-hidden="true">
+          <p class="res-quote">"Nous réservons votre table avec le même soin que nous mettons dans l'assiette."</p>
+        </div>
+      </div>
+      <div class="res-form-side">
+        <div class="res-form-inner">
+          <p class="section-eyebrow">Réservation</p>
+          <h2 class="section-title">Votre <em>table</em><br/>vous attend</h2>
+          <p class="res-sub">Confirmation immédiate par WhatsApp.</p>
+
+          <form class="res-form" id="reservationForm" novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="resName">Nom</label>
+                <input type="text" id="resName" name="name" placeholder="Votre nom complet" required autocomplete="name"/>
+              </div>
+              <div class="field">
+                <label for="resPhone">Téléphone</label>
+                <input type="tel" id="resPhone" name="phone" placeholder="+224 6XX XX XX XX" required autocomplete="tel"/>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="resDate">Date</label>
+                <input type="date" id="resDate" name="date" required/>
+              </div>
+              <div class="field">
+                <label for="resTime">Heure</label>
+                <select id="resTime" name="time" required>
+                  <option value="">— Choisir —</option>
+                  <option value="11:00">11h00</option>
+                  <option value="12:00">12h00</option>
+                  <option value="13:00">13h00</option>
+                  <option value="14:00">14h00</option>
+                  <option value="19:00">19h00</option>
+                  <option value="20:00">20h00</option>
+                  <option value="21:00">21h00</option>
+                  <option value="22:00">22h00</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="resGuests">Nombre de personnes</label>
+              <select id="resGuests" name="guests" required>
+                <option value="">— Sélectionner —</option>
+                <option value="1">1 personne</option>
+                <option value="2">2 personnes</option>
+                <option value="3">3 personnes</option>
+                <option value="4">4 personnes</option>
+                <option value="5">5 personnes</option>
+                <option value="6">6 personnes</option>
+                <option value="7+">7 personnes ou plus</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="resNote">Note (optionnel)</label>
+              <textarea id="resNote" name="note" rows="2" placeholder="Occasion spéciale, allergies, préférences…"></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="reserveSubmitBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Confirmer sur WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROMOTIONS ══ -->
+  <section class="promos" aria-label="Promotions">
+    <div class="promos-inner">
+      <p class="section-eyebrow js-reveal">Offres spéciales</p>
+      <h2 class="section-title js-reveal">Nos <em>promotions</em></h2>
+      <div class="promos-grid">
+        <div class="promo-item js-reveal">
+          <div class="promo-num">01</div>
+          <h3>Menu du Midi</h3>
+          <p>Entrée + Plat + Boisson · En semaine de 11h à 14h</p>
+          <div class="promo-price">60 000 <small>GNF</small></div>
+        </div>
+        <div class="promo-item promo-item--dark js-reveal">
+          <div class="promo-num">02</div>
+          <h3>Brunch du Week-end</h3>
+          <p>Buffet complet · Samedi & Dimanche 11h–15h</p>
+          <div class="promo-price">80 000 <small>GNF</small></div>
+        </div>
+        <div class="promo-item js-reveal">
+          <div class="promo-num">03</div>
+          <h3>Menus de Fête</h3>
+          <p>Ramadan, Tabaski, Noël · Sur réservation</p>
+          <div class="promo-price">Sur devis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ LOCALISATION ══ -->
+  <section id="localisation" class="localisation" aria-label="Localisation et contact">
+    <div class="loc-content">
+      <p class="section-eyebrow js-reveal">Nous trouver</p>
+      <h2 class="section-title js-reveal"><em>Centre Versailles</em><br/>Conakry, Guinée</h2>
+      <div class="loc-details js-reveal">
+        <div class="loc-item">
+          <span class="loc-label">Adresse</span>
+          <span class="loc-val">Centre Versailles, Conakry</span>
+        </div>
+        <div class="loc-item">
+          <span class="loc-label">Téléphone</span>
+          <a href="tel:+224628434445" class="loc-val loc-link">+224 628 43 44 45</a>
+        </div>
+        <div class="loc-item">
+          <span class="loc-label">Lun – Sam</span>
+          <span class="loc-val">11h00 – 23h00</span>
+        </div>
+        <div class="loc-item">
+          <span class="loc-label">Dimanche</span>
+          <span class="loc-val">12h00 – 22h00</span>
+        </div>
+        <div class="loc-item">
+          <span class="loc-label">Parking</span>
+          <span class="loc-val">Gratuit sur place</span>
+        </div>
+      </div>
+      <a href="https://www.google.com/maps/place/Restaurant+Versailles/@9.5627203,-13.6412232,17z/data=!4m6!3m5!1s0xf1cd7eded2679c3:0xbbc9bf6b2fa6cf24!8m2!3d9.5627203!4d-13.6412232!16s%2Fg%2F11tnc0zw4j" target="_blank" rel="noopener" class="btn-primary" id="directionsBtn">Obtenir l'itinéraire</a>
+    </div>
+    <div class="loc-map">
+      <iframe
+        title="Localisation Restaurant Versailles Conakry"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3937.199341490214!2d-13.643411885211053!3d9.562720293144888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf1cd7eded2679c3%3A0xbbc9bf6b2fa6cf24!2sRestaurant%20Versailles!5e0!3m2!1sfr!2sgn!4v1700000000000!5m2!1sfr!2sgn"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact" class="contact" aria-label="Nous contacter">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <p class="section-eyebrow js-reveal">Contact</p>
+        <h2 class="section-title js-reveal">Parlons-nous<br/><em>directement</em></h2>
+        <div class="contact-methods js-reveal">
+          <a href="tel:+224628434445" class="contact-method">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.42 1.28 2 2 0 012.41 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.61 7.88a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            <div>
+              <span class="cm-label">Téléphone</span>
+              <span class="cm-val">+224 628 43 44 45</span>
+            </div>
+          </a>
+          <a href="https://wa.me/224628434445" target="_blank" rel="noopener" class="contact-method contact-method--wa" id="waContactMethod">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <div>
+              <span class="cm-label">WhatsApp</span>
+              <span class="cm-val">Réponse en moins d'une heure</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="field">
+          <label for="cName">Votre nom</label>
+          <input type="text" id="cName" name="name" placeholder="Fatoumata Diallo" required autocomplete="name"/>
+        </div>
+        <div class="field">
+          <label for="cPhone">Téléphone</label>
+          <input type="tel" id="cPhone" name="phone" placeholder="+224 6XX XX XX XX" required autocomplete="tel"/>
+        </div>
+        <div class="field">
+          <label for="cMsg">Message</label>
+          <textarea id="cMsg" name="message" rows="4" placeholder="Votre message…" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" id="contactSubmitBtn">Envoyer le message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">Versailles</span>
+        <p>Restaurant gastronomique · Conakry, Guinée</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navigation pied de page">
+        <a href="index.html#experience">L'expérience</a>
+        <a href="menu.html">Le menu</a>
+        <a href="index.html#histoire">Histoire</a>
+        <a href="index.html#galerie">Galerie</a>
+        <a href="index.html#reservation">Réservation</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="menu.html?admin=true" class="footer-admin-link" style="opacity: 0.25; font-size: 0.6rem; letter-spacing: 0.1em; display: block; margin-top: 16px; text-transform: uppercase;">Espace Gérant</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="tel:+224628434445">+224 628 43 44 45</a>
+        <a href="https://wa.me/224628434445" target="_blank" rel="noopener" id="footerWaLink">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Restaurant Versailles · Tous droits réservés</p>
+      <p>Centre Versailles, Conakry, Guinée</p>
+    </div>
+  </footer>
+
+  <!-- ══ WHATSAPP FLOATING ══ -->
+  <a href="https://wa.me/224628434445?text=Bonjour%20Restaurant%20Versailles,%20je%20souhaite%20vous%20contacter."
+     target="_blank" rel="noopener"
+     class="wa-float" id="waFloat" aria-label="Contacter sur WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ══ TOAST ══ -->
+  <div class="toast" id="toast" role="alert" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

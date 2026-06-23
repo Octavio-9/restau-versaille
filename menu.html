@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La Carte — Restaurant Versailles · Conakry</title>
+  <meta name="description" content="Découvrez la carte du Restaurant Versailles, Conakry. Une sélection gastronomique d'exception alliant traditions locales et raffinement international."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+  <!-- ══ NAV ══ -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo" aria-label="Versailles Accueil">
+        <div class="logo-wrapper">
+          <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#D4AF37" />
+                <stop offset="50%" stop-color="#F3E5AB" />
+                <stop offset="100%" stop-color="#AA7C11" />
+              </linearGradient>
+            </defs>
+            <!-- Fork 1 (tilted) -->
+            <g transform="translate(50,50) rotate(25) translate(-50,-50)" stroke="url(#goldGrad)" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M50,15 L50,72"/>
+              <!-- Main top-outward curls -->
+              <path d="M50,15 C40,5 30,12 36,22 C41,29 50,22 50,22"/>
+              <path d="M50,15 C60,5 70,12 64,22 C59,29 50,22 50,22"/>
+              <!-- Secondary lower-outward curls -->
+              <path d="M50,27 C38,24 32,32 40,40 C45,44 50,38 50,38"/>
+              <path d="M50,27 C62,24 68,32 60,40 C55,44 50,38 50,38"/>
+              <!-- Four tines at the bottom pointing downwards/outwards -->
+              <path d="M41,72 C41,75 43,78 50,78 C57,78 59,75 59,72 M41,72 L41,84 M47,72 L47,86 M53,72 L53,86 M59,72 L59,84"/>
+            </g>
+            <!-- Fork 2 (tilted other way) -->
+            <g transform="translate(50,50) rotate(-25) translate(-50,-50)" stroke="url(#goldGrad)" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M50,15 L50,72"/>
+              <path d="M50,15 C40,5 30,12 36,22 C41,29 50,22 50,22"/>
+              <path d="M50,15 C60,5 70,12 64,22 C59,29 50,22 50,22"/>
+              <path d="M50,27 C38,24 32,32 40,40 C45,44 50,38 50,38"/>
+              <path d="M50,27 C62,24 68,32 60,40 C55,44 50,38 50,38"/>
+              <path d="M41,72 C41,75 43,78 50,78 C57,78 59,75 59,72 M41,72 L41,84 M47,72 L47,86 M53,72 L53,86 M59,72 L59,84"/>
+            </g>
+          </svg>
+          <div class="logo-text-group">
+            <span class="logo-title">VERSAILLES</span>
+            <span class="logo-subtitle">Restaurant <span class="logo-stars">★ ★</span></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (Visible on large screens) -->
+      <ul class="desktop-nav-list" role="list">
+        <li><a href="index.html#experience" class="d-nav-item">L'expérience</a></li>
+        <li><a href="menu.html" class="d-nav-item">Le menu</a></li>
+        <li><a href="index.html#histoire" class="d-nav-item">Histoire</a></li>
+        <li><a href="index.html#galerie" class="d-nav-item">Galerie</a></li>
+        <li><a href="index.html#contact" class="d-nav-item">Contact</a></li>
+      </ul>
+
+      <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+      <div class="nav-menu" id="navMenu" role="dialog" aria-label="Menu de navigation">
+        <div class="nav-menu-inner">
+          <ul class="nav-list" role="list">
+            <li><a href="index.html#experience" class="nav-item">L'expérience</a></li>
+            <li><a href="menu.html" class="nav-item">Le menu</a></li>
+            <li><a href="index.html#histoire" class="nav-item">Histoire</a></li>
+            <li><a href="index.html#galerie" class="nav-item">Galerie</a></li>
+            <li><a href="index.html#contact" class="nav-item">Contact</a></li>
+          </ul>
+          <a href="index.html#reservation" class="nav-reserve">Réserver une table</a>
+          <div class="nav-footer-info">
+            <p>+224 628 43 44 45</p>
+            <p>Centre Versailles · Conakry</p>
+          </div>
+        </div>
+      </div>
+      <a href="index.html#reservation" class="nav-cta" id="navCta">Réserver</a>
+    </nav>
+  </header>
+
+  <!-- ══ HEADER NARRATIF ══ -->
+  <header class="menu-page-header">
+    <p class="section-eyebrow">La Carte</p>
+    <h1>Une symphonie de <em>saveurs</em></h1>
+    <p>Chaque création raconte une rencontre. Découvrez notre sélection d'entrées légères, nos plats de tradition réinventés, nos grillades signature au feu de bois et nos douceurs de fin de repas.</p>
+  </header>
+
+  <!-- ══ CATÉGORIES TABS ══ -->
+  <section class="menu-section" style="padding-top: 40px; padding-bottom: 20px;">
+    <div class="menu-tabs-row" role="tablist" aria-label="Catégories du menu">
+      <button class="menu-tab active" role="tab" aria-selected="true" data-cat="burgers" id="tab-burgers">Burgers</button>
+      <button class="menu-tab" role="tab" aria-selected="false" data-cat="pizzas" id="tab-pizzas">Pizzas</button>
+      <button class="menu-tab" role="tab" aria-selected="false" data-cat="plats" id="tab-plats">Nos Plats</button>
+      <button class="menu-tab" role="tab" aria-selected="false" data-cat="grillades" id="tab-grillades">Grillades</button>
+      <button class="menu-tab" role="tab" aria-selected="false" data-cat="boissons" id="tab-boissons">Boissons & Extras</button>
+    </div>
+  </section>
+
+  <!-- ══ ADMIN ACTIONS ══ -->
+  <div class="admin-only-actions" id="adminOnlyActions" style="max-width: 1200px; margin: 0 auto 30px auto; padding: 0 20px; display: none; justify-content: flex-end;">
+    <button class="btn-primary" id="addDishBtn" style="font-size: 0.8rem; padding: 12px 24px; border-radius: 0; text-transform: uppercase; letter-spacing: 0.1em; display: inline-flex; align-items: center; gap: 8px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+      </svg>
+      Ajouter un plat
+    </button>
+  </div>
+
+  <!-- ══ DISHES GRID ══ -->
+  <main id="dishesGridContainer">
+    <div class="dishes-grid" id="dishesGrid">
+      <!-- Generated dynamically by menu.js -->
+    </div>
+  </main>
+
+  <!-- ══ FLOATING ADMIN BAR ══ -->
+  <div class="admin-bar" id="adminBar">
+    <div class="admin-bar-status">
+      <span class="admin-status-dot"></span>
+      <span>Mode Gérant Actif</span>
+    </div>
+    <button class="btn-admin-logout" id="adminLogoutBtn">Déconnexion</button>
+  </div>
+
+  <!-- ══ ADMIN LOGIN MODAL ══ -->
+  <div class="admin-modal" id="adminLoginModal">
+    <div class="admin-modal-content">
+      <button class="admin-modal-close" id="closeLoginBtn" aria-label="Fermer">✕</button>
+      <h2>Portail Gérant</h2>
+      <p>Entrez votre code d'accès pour modifier les photos du menu.</p>
+      <form id="adminLoginForm">
+        <div class="field">
+          <label for="adminPass">Code d'accès</label>
+          <input type="password" id="adminPass" required placeholder="••••" autocomplete="current-password"/>
+        </div>
+        <button type="submit" class="btn-primary">S'authentifier</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ══ EDIT DISH MODAL ══ -->
+  <div class="admin-modal" id="uploadModal">
+    <div class="admin-modal-content" style="max-width: 500px;">
+      <button class="admin-modal-close" id="closeUploadBtn" aria-label="Fermer">✕</button>
+      <h2 id="uploadModalTitle">Modifier le plat</h2>
+      <p id="uploadModalSub">Modifiez les informations du plat (nom, prix, ingrédients) et sa photo.</p>
+      
+      <form id="uploadPhotoForm">
+        <input type="hidden" id="uploadDishId"/>
+        
+        <div class="field">
+          <label for="editDishName">Nom du plat</label>
+          <input type="text" id="editDishName" required placeholder="Ex: Burger Versailles"/>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="editDishPrice">Prix du plat</label>
+            <input type="text" id="editDishPrice" required placeholder="Ex: 155 000 FG"/>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="editDishDesc">Description & Ingrédients</label>
+          <textarea id="editDishDesc" rows="3" required placeholder="Ex: Pain burger, steak haché, cheddar..."></textarea>
+        </div>
+
+        <div class="field">
+          <label>Photo du plat</label>
+          <!-- Local File -->
+          <div class="file-drag-zone" id="dragZone" style="padding: 20px 10px; margin-bottom: 10px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 24px; height: 24px; margin-bottom: 6px;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"/>
+            </svg>
+            <p style="font-size: 0.7rem; margin-bottom: 0;">Faites glisser une image ou <strong>parcourez vos fichiers</strong></p>
+            <input type="file" id="fileInput" accept="image/*"/>
+          </div>
+          <div id="imagePreviewContainer" style="display: none; align-items: center; gap: 12px; margin-bottom: 15px; background: var(--charcoal-soft); padding: 8px; border: 1px solid var(--sable-dark);">
+            <img id="editDishPreviewImg" src="" style="width: 50px; height: 35px; object-fit: cover; border: 1px solid var(--sable-mid);"/>
+            <span style="font-size: 0.7rem; color: var(--sable-mid); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 280px;" id="editDishPreviewName">Image sélectionnée</span>
+            <button type="button" id="clearPreviewBtn" style="color: var(--terra); font-size: 0.75rem; margin-left: auto; font-weight: 500;">Effacer</button>
+          </div>
+        </div>
+
+        <div class="upload-separator" style="margin: 10px 0;">Ou lien direct</div>
+
+        <!-- URL -->
+        <div class="field" style="margin-bottom: 24px;">
+          <label for="imageUrlInput">Lien de l'image (URL)</label>
+          <input type="url" id="imageUrlInput" placeholder="https://example.com/image.jpg"/>
+        </div>
+
+        <button type="submit" class="btn-primary">Enregistrer les modifications</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">Versailles</span>
+        <p>Restaurant gastronomique · Conakry, Guinée</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navigation pied de page">
+        <a href="index.html#experience">L'expérience</a>
+        <a href="menu.html">Le menu</a>
+        <a href="index.html#histoire">Histoire</a>
+        <a href="index.html#galerie">Galerie</a>
+        <a href="index.html#reservation">Réservation</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="#" id="footerAdminTrigger" class="footer-admin-link" style="opacity: 0.25; font-size: 0.6rem; letter-spacing: 0.1em; display: block; margin-top: 16px; text-transform: uppercase;">Espace Gérant</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="tel:+224628434445">+224 628 43 44 45</a>
+        <a href="https://wa.me/224628434445" target="_blank" rel="noopener" id="footerWaLink">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Restaurant Versailles · Tous droits réservés</p>
+      <p>Centre Versailles, Conakry, Guinée</p>
+    </div>
+  </footer>
+
+  <!-- ══ TOAST ══ -->
+  <div class="toast" id="toast" role="alert" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>
